@@ -19,8 +19,7 @@ def get_file_content(filename='file1.txt'):
             if start_line is not None and end_line is not None:
                 content = ''.join(lines[start_line-1:end_line])
             else:
-                content = ''.join(lines)
-                
+                content = ''.join(lines)      
         return render_template('file_content.html', content=content)
     
     except FileNotFoundError:
